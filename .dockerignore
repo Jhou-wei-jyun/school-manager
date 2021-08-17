@@ -1,0 +1,5 @@
+ci/data
+ci/storage
+src/app/storage/logs/*
+src/app/storage/views/*
+src/node_modules

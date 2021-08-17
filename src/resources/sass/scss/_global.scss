@@ -1,0 +1,233 @@
+// Global component styles
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+
+// Main page wrapper
+#wrapper {
+  display: flex;
+  #content-wrapper {
+    background-color: $gray-100;
+    width: 100%;
+    overflow-x: hidden;
+    #content {
+      flex: 1 0 auto;
+    }
+  }
+}
+
+// Set container padding to match gutter width instead of default 15px
+.container,
+.container-fluid {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
+}
+
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: $white;
+  background: fade-out($gray-800, .5);
+  line-height: 46px;
+  &:focus,
+  &:hover {
+    color: white;
+  }
+  &:hover {
+    background: $gray-800;
+  }
+  i {
+    font-weight: 800;
+  }
+}
+
+.mainbody {
+  overflow: scroll;
+  min-height: 100vh;
+}
+// .maincontent {
+//   margin-top: $topbar-base-height;
+// }
+
+.bg-illoly-green {
+  background: $illoly-green;
+}
+.bg-illoly-murasaki {
+  background-color: $illoly-murasaki;
+}
+.bg-illoly-yellow {
+  background: $illoly-yellow;
+}
+.bg-illoly-illoly {
+  background: url('/images/ST6GmrJA.jpeg') bottom no-repeat;
+  background-size: cover;
+}
+.bg-illoly-Tutor {
+  background: url('/images/dashboard_bgc_02.jpg') bottom no-repeat;
+  background-size: cover;
+}
+
+.notification_btn {
+  float: right;
+  font-size: 1.38rem;
+  border-radius: 1rem;
+  // padding: 10px 40px;
+  &_yellow {
+    background-color: #ffffbf;
+  }
+  &_blue {
+    background-color: #D7F4FE;
+  }
+  &_sky {
+    background-color: #7ABFFF;
+  }
+  &_green {
+    background-color: #b2f9dd;
+  }
+  &_red {
+    background-color: #fc7acc;
+  }
+  &_gray {
+    background-color: #b8b8b8;
+  }
+  &_text_white {
+    color: white;
+  }
+}
+.text_color {
+  &_green {
+    color: green;
+  }
+  &_red {
+    color: red;
+  }
+}
+
+// .text_color_gray200 {
+//   color: $gray-200 !important;
+// }
+@for $i from 1 through 9 {
+  .text_color_gray#{$i*100}{
+    color: lighten($black, $i * 10%)  !important;
+  }
+}
+
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.5);
+  // filter: blur(20px);
+
+}
+
+.select select, .textarea, .input, .taginput .taginput-container.is-focusable {
+  background-color: #ebeff4;
+  border-color: #ced4da;
+  border-radius: 0.8rem;
+  color: #495057;
+}
+.white {
+  .select {
+    select, .textarea, .input, .taginput .taginput-container.is-focusable {
+      background-color: white;
+      border-color: #ced4da;
+      border-radius: 0.8rem;
+      color: #495057;
+    }
+  }
+}
+#white_square {
+
+  .select select, .textarea, .input, .taginput .taginput-container.is-focusable {
+      background-color: white;
+      border-color: #8e8e8e;
+      border-radius: 0px;
+      color: #495057;
+    }
+
+}
+
+
+//pill-tab custom
+.nav-pills {
+  .nav-link {
+      display: inline;
+      font-size: 1rem;
+      border-radius: 0.25rem;
+      color: rgba(145, 144, 144, 0.824);
+  }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: black;
+  background-color: transparent;
+  border-style: solid;
+  border-color: transparent transparent #abdcd5 transparent;
+}
+.shadow {
+  box-shadow: 0 0.15em 0em 0.05em rgba(0, 0, 0, 0.1), 0 0px 0 1px rgba(0, 0, 0, 0.02) !important;
+}
+
+.table th:not([align]) {
+  text-align: center;
+
+    // font-family: Archivo;
+    font-size: 16px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #6c7887;
+    background-color: $gray-200;
+
+}
+.table td:not([align]) {
+  text-align: center;
+  vertical-align: middle;
+  // font-family: Archivo;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #6c7887;
+
+}
+
+.button.is-small {
+  border-radius: 0.75rem;
+  font-size: 0.9rem;
+}
+img.inverse {
+  transform: rotate(180deg);
+}
+.profile-camera {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.profile-img {
+  position: relative;
+  width: 125px;
+  height: 125px;
+}

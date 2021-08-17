@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <clipPath id="clip-edit_icon">
+      <rect width="72" height="72"/>
+    </clipPath>
+  </defs>
+  <g id="edit_icon" clip-path="url(#clip-edit_icon)">
+    <rect id="Rectangle_19" data-name="Rectangle 19" width="56" height="57" rx="12" transform="translate(8 8)" fill="#e3fff4"/>
+    <g id="edit" transform="translate(16 16)">
+      <g id="Group_5" data-name="Group 5">
+        <g id="Group_4" data-name="Group 4">
+          <path id="Path_9" data-name="Path 9" d="M0,91.947V100.1H8.152L32.206,76.045l-8.152-8.152Z" transform="translate(0 -60.975)" fill="#5edc88"/>
+          <path id="Path_10" data-name="Path 10" d="M270.8,5.712,265.72.636a2.178,2.178,0,0,0-3.076,0l-3.978,3.978,8.152,8.152L270.8,8.788A2.178,2.178,0,0,0,270.8,5.712Z" transform="translate(-232.308)" fill="#5edc88"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

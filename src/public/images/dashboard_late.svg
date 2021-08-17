@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <clipPath id="clip-dashboard_late">
+      <rect width="72" height="72"/>
+    </clipPath>
+  </defs>
+  <g id="dashboard_late" clip-path="url(#clip-dashboard_late)">
+    <g id="alarm-clock" transform="translate(7 6.998)">
+      <path id="Path_52" data-name="Path 52" d="M54.812,7.321l0-3.706h5.423V0H45.779V3.616H51.2l0,3.706a25.234,25.234,0,0,0-18.225,40.6l-1.652,9.91H36.74l2.669-4a25.118,25.118,0,0,0,27.2,0l2.663,4H74.7l-1.652-9.91a25.234,25.234,0,0,0-18.232-40.6Zm-1.8,46.9A21.687,21.687,0,1,1,74.7,32.532,21.712,21.712,0,0,1,53.008,54.219Z" transform="translate(-24.092 0)" fill="#638bfa"/>
+      <path id="Path_53" data-name="Path 53" d="M211.409,138.53h-3.615v13.4l8.66,8.66,2.556-2.556-7.6-7.6Z" transform="translate(-180.685 -120.456)" fill="#638bfa"/>
+      <path id="Path_54" data-name="Path 54" d="M0,0H3.614V19.389H0Z" transform="translate(41.561 2.556) rotate(-45)" fill="#638bfa"/>
+      <path id="Path_55" data-name="Path 55" d="M0,0H19.389V3.614H0Z" transform="translate(0 13.709) rotate(-45)" fill="#638bfa"/>
+    </g>
+  </g>
+</svg>

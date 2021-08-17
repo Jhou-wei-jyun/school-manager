@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <clipPath id="clip-dashboard_temperature">
+      <rect width="72" height="72"/>
+    </clipPath>
+  </defs>
+  <g id="dashboard_temperature" clip-path="url(#clip-dashboard_temperature)">
+    <g id="weather" transform="translate(-108 3.999)">
+      <g id="Group_57" data-name="Group 57" transform="translate(128)">
+        <g id="Group_56" data-name="Group 56">
+          <path id="Path_50" data-name="Path 50" d="M154.723,36.15V10.689a10.689,10.689,0,0,0-21.378,0V36.15a16.034,16.034,0,1,0,21.378,0ZM144.034,58.79a10.689,10.689,0,0,1-7.125-18.658l1.78-1.593V10.689a5.345,5.345,0,1,1,10.689,0v27.85l1.78,1.593a10.689,10.689,0,0,1-7.125,18.658Z" transform="translate(-128)" fill="#ff9696"/>
+        </g>
+      </g>
+      <g id="Group_59" data-name="Group 59" transform="translate(141.361 21.378)">
+        <g id="Group_58" data-name="Group 58">
+          <rect id="Rectangle_73" data-name="Rectangle 73" width="5.345" height="32.067" fill="#ff9696"/>
+        </g>
+      </g>
+      <g id="Group_61" data-name="Group 61" transform="translate(135.809 40.347)">
+        <g id="Group_60" data-name="Group 60" transform="translate(0 0)">
+          <circle id="Ellipse_14" data-name="Ellipse 14" cx="8" cy="8" r="8" transform="translate(0.191 -0.42)" fill="#ff9696"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

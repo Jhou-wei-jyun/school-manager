@@ -1,0 +1,11 @@
+
+/var/www/html/storage/redis.log {
+    missingok
+    notifempty
+
+    copytruncate
+    rotate 5
+    maxsize 50M
+
+    su docker staff
+}

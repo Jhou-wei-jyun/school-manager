@@ -1,0 +1,46 @@
+{
+  "authHost": "http://server.ilolly.internal.com:80",
+  "authEndpoint": "/broadcasting/auth",
+  "clients": [
+    {
+      "appId": "c9accf7ca56ef08d",
+      "key": "102e9041197cabe56ad78c528a8d4a60"
+    }
+  ],
+  "database": "redis",
+  "databaseConfig": {
+    "redis": {
+      "host": "redis.ilolly.internal.com",
+      "port": "6379",
+      "password": "redispass",
+      "keyPrefix": "",
+      "options": {
+        "db": "0"
+      }
+    },
+    "sqlite": {
+      "databasePath": "/database/laravel-echo-server.sqlite"
+    },
+    "publishPresence": true
+  },
+  "devMode": true,
+  "host": null,
+  "port": "6001",
+  "protocol": "http",
+  "socketio": {},
+  "secureOptions": 67108864,
+  "sslCertPath": "",
+  "sslKeyPath": "",
+  "sslCertChainPath": "",
+  "sslPassphrase": "",
+  "subscribers": {
+    "http": true,
+    "redis": true
+  },
+  "apiOriginAllow": {
+    "allowCors": true,
+    "allowOrigin": "http://server.ilolly.internal.com:80",
+    "allowMethods": "GET, POST",
+    "allowHeaders": "Origin, Content-Type, X-Auth-Token, X-Requested-With, Accept, Authorization, X-CSRF-TOKEN, X-Socket-Id"
+  }
+}

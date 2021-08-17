@@ -1,0 +1,43 @@
+1. 編譯系統版本:
+
+```
+cd ci
+bash ./cli.sh build
+```
+
+2. 啟動服務:
+
+```
+cd ci
+bash ./cli.sh start
+```
+
+3. 匯入初始資料 (三個手段):
+
+- 使用 Naviacat 之類的工具把 ims.sql 匯入資料庫
+- 在 MySQL 容器中執行 `mysql -u ims -p deployer < /tmp/ims.sql`
+- 執行 `bash ./cli.sh init` 然後按 `Y` 繼續
+
+
+4. 修改程式碼後, 重啟服務:
+
+```
+cd ci
+docker stop ilolly-server || true && docker rm ilolly-server || true && docker-compose up -d
+```
+
+
+5. 打包前端靜態資源:
+
+```
+cd ci
+bash ./cli.sh package
+```
+
+
+6. 進入開發模式 (前端即時編譯, 後端目錄掛載, 資料庫開對外端口):
+
+```
+cd ci
+bash ./cli.sh develop
+```

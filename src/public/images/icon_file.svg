@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="499" height="532" viewBox="0 0 499 532">
+  <defs>
+    <clipPath id="clip-iPhone_XR_XS_Max_11_114">
+      <rect width="499" height="532"/>
+    </clipPath>
+  </defs>
+  <g id="iPhone_XR_XS_Max_11_114" data-name="iPhone XR, XS Max, 11 – 114" clip-path="url(#clip-iPhone_XR_XS_Max_11_114)">
+    <g id="google-docs" transform="translate(-6 10)">
+      <path id="Path_105" data-name="Path 105" d="M446.605,124.392l-120-120A15.02,15.02,0,0,0,316,0H106A45.051,45.051,0,0,0,61,45V467a45.051,45.051,0,0,0,45,45H406a45.051,45.051,0,0,0,45-45V135A15.138,15.138,0,0,0,446.605,124.392ZM331,51.213,399.787,120H346a15.017,15.017,0,0,1-15-15ZM406,482H106a15.017,15.017,0,0,1-15-15V45a15.017,15.017,0,0,1,15-15H301v75a45.051,45.051,0,0,0,45,45h75V467A15.017,15.017,0,0,1,406,482Z" fill="#b0b0b0"/>
+      <path id="Path_106" data-name="Path 106" d="M346,212H166a15,15,0,0,0,0,30H346a15,15,0,0,0,0-30Z" fill="#b0b0b0"/>
+      <path id="Path_107" data-name="Path 107" d="M346,272H166a15,15,0,0,0,0,30H346a15,15,0,0,0,0-30Z" fill="#b0b0b0"/>
+      <path id="Path_108" data-name="Path 108" d="M346,332H166a15,15,0,0,0,0,30H346a15,15,0,0,0,0-30Z" fill="#b0b0b0"/>
+      <path id="Path_109" data-name="Path 109" d="M286,392H166a15,15,0,0,0,0,30H286a15,15,0,0,0,0-30Z" fill="#b0b0b0"/>
+    </g>
+  </g>
+</svg>

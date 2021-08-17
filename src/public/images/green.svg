@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="91" viewBox="0 0 95 91">
+  <defs>
+    <clipPath id="clip-green">
+      <rect width="95" height="91"/>
+    </clipPath>
+  </defs>
+  <g id="green" clip-path="url(#clip-green)">
+    <circle id="Ellipse_38" data-name="Ellipse 38" cx="23.5" cy="23.5" r="23.5" transform="translate(24 22)" fill="#86ea86"/>
+  </g>
+</svg>

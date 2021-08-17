@@ -1,0 +1,28 @@
+version: '3'
+
+networks:
+  net_bridge:
+    driver: bridge
+
+services:
+
+  web:
+    image: node:14.5.0-alpine3.12
+    container_name: ilolly-web
+    #build:
+    #  context: ../
+    #  dockerfile: ./ci/build/Dockerfile.node
+    environment:
+      - APP_DEBUG=true
+    volumes:
+      - ../src/app:/workspace/app
+      - ../src/resources:/workspace/resources
+      - ../src/public:/workspace/public
+      - ../src/package.json:/workspace/package.json
+      - ../src/package-lock.json:/workspace/package-lock.json
+      - ../src/webpack.mix.js:/workspace/webpack.mix.js
+      - ../src/node_modules:/workspace/node_modules
+      - ../ci/script/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh
+    #command: watch-poll # npm command
+    #command: development # npm command
+    command: production # npm command: package static resource files

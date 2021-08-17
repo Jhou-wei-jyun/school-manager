@@ -1,0 +1,20 @@
+.b-table {
+    &.department-table {
+        min-height:100px;
+
+        .table {
+            th {
+                height: 60px;
+                vertical-align: middle;
+                padding-left: 24px;
+            }
+
+            tr {
+                td {
+                    vertical-align: middle;
+                    padding-left: 24px;
+                }
+            }
+        }
+    }
+}

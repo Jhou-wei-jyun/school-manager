@@ -1,0 +1,132 @@
+version: '3'
+
+networks:
+  net_bridge:
+    driver: bridge
+
+services:
+
+  app:
+    image: harbor.shoesconn.com/localrepo/ilolly:latest
+    container_name: ilolly-server
+    build:
+      context: ../
+      dockerfile: ./ci/build/Dockerfile
+    restart: unless-stopped
+    env_file: ./conf/.env
+    environment:
+      - APP_KEY=base64:GkQ3dfm5BiNgk9kW7o0xU1R/j8EmEMpYybhM0zQ6iio=
+      - APP_URL=http://localhost
+      - APP_DEBUG=true
+      - MAIL_FROM_ADDR=you@example.com
+      - MAIL_REPLYTO_ADDR=you@example.com
+      - PHP_UPLOAD_LIMIT=40
+    volumes:
+      - ../ci/storage/ilolly/storage:/var/www/html/storage
+      - ../ci/conf/sys_cronjob:/etc/cron.d/sys_cronjob
+      - ../ci/conf/sys_logrotate:/etc/logrotate.d/sys_logrotate
+      - ../src/app:/var/www/html/app
+      - ../src/public:/var/www/html/public
+      - ../src/resources:/var/www/html/resources
+      - ../src/routes:/var/www/html/routes
+    ports:
+      - 7031:80
+    networks:
+      net_bridge:
+        aliases:
+          - server.ilolly.internal.com
+    depends_on:
+      - db
+      - redis
+      - mail
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1024k"
+        max-file: "4"
+
+  redis:
+    image: redis:4.0.9
+    container_name: ilolly-redis
+    restart: unless-stopped
+    command: redis-server --requirepass redispass
+    networks:
+      net_bridge:
+        aliases:
+          - redis.ilolly.internal.com
+
+  db:
+    image: mysql:5.7.31
+    container_name: ilolly-mysql
+    restart: unless-stopped
+    env_file: ./conf/.env
+    volumes:
+      - ../ci/storage/mysql:/var/lib/mysql
+      - ../ci/script/database_init.sh:/opt/database_init.sh
+      - ../ci/data/deployer.sql:/opt/bootstrap_data.sql
+    ports:
+      - 8069:3306
+    networks:
+      net_bridge:
+        aliases:
+          - db.ilolly.internal.com
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1024k"
+        max-file: "4"
+
+  echo-server:
+    image: oanhnn/laravel-echo-server:3.1.0
+    container_name: ilolly-echo-server
+    restart: unless-stopped
+    volumes:
+      - ../ci/conf/laravel-echo-server.json:/app/laravel-echo-server.json
+    ports:
+      - 6001:6001
+    networks:
+      net_bridge:
+        aliases:
+          - echo.ilolly.internal.com
+    depends_on:
+      - redis
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1024k"
+        max-file: "4"
+
+  mail:
+    image: catatnight/postfix
+    container_name: ilolly-mail
+    restart: unless-stopped
+    environment:
+      - maildomain=example.com
+      - smtp_user=postfix:postfix
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "1024k"
+        max-file: "4"
+
+  web:
+    image: node:14.5.0-alpine3.12
+    container_name: ilolly-web
+    #build:
+    #  context: ../
+    #  dockerfile: ./ci/build/Dockerfile.node
+    environment:
+      - APP_DEBUG=true
+    volumes:
+      - ../src/app:/workspace/app
+      - ../src/routes:/workspace/routes
+      - ../src/resources:/workspace/resources
+      - ../src/public:/workspace/public
+      - ../src/package.json:/workspace/package.json
+      - ../src/package-lock.json:/workspace/package-lock.json
+      - ../src/webpack.mix.js:/workspace/webpack.mix.js
+      - ../src/node_modules:/workspace/node_modules
+      - ../ci/script/docker-entrypoint.sh:/usr/local/bin/docker-entrypoint.sh
+    command: watch-poll # npm command
+    #command: development # npm command
+    #command: production # npm command: package static resource files

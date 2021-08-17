@@ -1,0 +1,63 @@
+// // Body
+// $body-bg: #f8fafc;
+
+// // Typography
+// $font-family-sans-serif: 'Nunito', sans-serif;
+// $font-size-base: 0.9rem;
+// $line-height-base: 1.6;
+
+// // Colors
+// $blue: #3490dc;
+// $indigo: #6574cd;
+// $purple: #9561e2;
+// $pink: #f66d9b;
+// $red: #e3342f;
+// $orange: #f6993f;
+// $yellow: #ffed4a;
+// $green: #38c172;
+// $teal: #4dc0b5;
+// $cyan: #6cb2eb;
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+
+
+// Set your colors
+$primary: #0084ff;
+$primary-invert: findColorInvert($primary);
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+$ims: #181f38;
+$ims-invert: findColorInvert($ims);
+$gray: #dcdcdc;
+$imsGray-invert: findColorInvert($gray);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "ims": ($ims, $ims-invert),
+    "gray": ($gray, $imsGray-invert),
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "twitter": ($twitter, $twitter-invert)
+);
+
+// Links
+$link: $twitter;
+$link-invert: $twitter-invert;
+$link-focus-border: $twitter;
+
+$navbar-height: 4rem;
+$input-background-color: #e6ebf1;
+$snackbar-background-color: $ims;
+$toast-border-radius: 1rem;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
