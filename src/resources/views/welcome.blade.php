@@ -23,7 +23,6 @@
 
     <nav class="navbar is-fixed-bottom">
         <div class="contact has-text-centered">
-            協雲科技股份有限公司 © 2020 Shoesconn Incorporated. ver 1.7 新聯絡簿後台
         </div>
     </nav>
 
