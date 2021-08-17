@@ -58,7 +58,7 @@ class AccountController extends Controller
 
             $collection =  collect ( [
                 'id' => $user->id,
-                'avatar' => 'avatar/small/' . $user->profile->avatar,
+                'avatar' => $user->profile->avatar ? null : 'avatar/small/' . $user->profile->avatar,
                 'name' => $user->profile->name,
                 'account' => $user->admin == null ? null : $user->admin->account,
                 'gender' => $user->profile->gender,

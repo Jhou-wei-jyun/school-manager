@@ -77,7 +77,7 @@ class TeacherController extends Controller
 
             $collection =  collect([
                 'id' => $teacher->id,
-                'avatar' => 'avatar/small/' . $teacher->profile->avatar,
+                'avatar' => $teacher->profile->avatar ? null : 'avatar/small/' . $teacher->profile->avatar,
                 'name' => $teacher->profile->name,
                 'gender' => $teacher->profile->gender,
                 'phone' => $teacher->phone,
@@ -111,7 +111,7 @@ class TeacherController extends Controller
 
             $collection =  collect([
                 'id' => $teacher->id,
-                'avatar' => 'avatar/small/' . $teacher->profile->avatar,
+                'avatar' => $teacher->profile->avatar ? null : 'avatar/small/' . $teacher->profile->avatar,
                 'name' => $teacher->profile->name,
                 'gender' => $teacher->profile->gender,
                 'phone' => $teacher->phone,
@@ -148,7 +148,7 @@ class TeacherController extends Controller
 
             $collection =  collect([
                 'id' => $teacher->id,
-                'avatar' => 'avatar/small/' . $teacher->profile->avatar,
+                'avatar' => $teacher->profile->avatar ? null : 'avatar/small/' . $teacher->profile->avatar,
                 'name' => $teacher->profile->name,
                 'gender' => $teacher->profile->gender,
                 'phone' => $teacher->phone,

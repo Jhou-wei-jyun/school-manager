@@ -50,7 +50,7 @@ class EmployeeController extends Controller
 
             $collection =  collect([
                 'id' => $student->id,
-                'avatar' => 'avatar/small/' . $student->profile->avatar,
+                'avatar' => $student->profile->avatar ? null : 'avatar/small/' . $student->profile->avatar,
                 'name' => $student->profile->name,
                 'gender' => $student->profile->gender,
                 'mac' => $student->user_type->mac == null ? null : $student->user_type->mac->mac,
@@ -88,7 +88,7 @@ class EmployeeController extends Controller
 
             $collection =  collect([
                 'id' => $student->id,
-                'avatar' => 'avatar/small/' . $student->profile->avatar,
+                'avatar' => $student->profile->avatar ? null : 'avatar/small/' . $student->profile->avatar,
                 'name' => $student->profile->name,
                 'gender' => $student->profile->gender,
                 'uuid' => $student->user_type->uuid == null ? null : $student->user_type->uuid->uuid,
@@ -127,7 +127,7 @@ class EmployeeController extends Controller
 
             $collection =  collect([
                 'id' => $student->id,
-                'avatar' => 'avatar/small/' . $student->profile->avatar,
+                'avatar' => $student->profile->avatar ? null : 'avatar/small/' . $student->profile->avatar,
                 'name' => $student->profile->name,
                 'gender' => $student->profile->gender,
                 'mac' => $student->user_type->mac == null ? null : $student->user_type->mac->mac,
